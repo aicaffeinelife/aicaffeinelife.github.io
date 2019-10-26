@@ -9,9 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-[Short Resume](files/AK_Resume.pdf)
+[Short Resume](../files/AK_Resume.pdf)
 
-[Long Resume](files/AK_Resume_long.pdf)
+[Long Resume](../files/AK_Resume_long.pdf)
 
 <!-- Education -->
 <!-- ====== -->
