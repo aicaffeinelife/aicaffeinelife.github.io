@@ -12,7 +12,7 @@ redirect_from:
 <!-- Bayesian techniques for optimization. I'm advised by Dr. Melissa C Smith.  -->
 
 <!-- Beyond my field of research, I'm very interested in Data Structures, Data Analysis and Operating Systems. In my spare time, I like to workout and hike. -->
-![](images/potrait.jpg)
+<!-- ![](images/potrait.jpg) -->
 
 - I'm a PhD Student in [Electrical and Computer Engineering Deparment](https://www.clemson.edu/cecas/departments/ece/index.html) at [Clemson University](http://clemson.edu), advised by [Dr. Melissa Smith](https://www.clemson.edu/cecas/departments/ece/faculty_staff/faculty/msmith.html).
 
