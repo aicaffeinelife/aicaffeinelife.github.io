@@ -1,20 +1,13 @@
 ---
-title: "Teaching experience 2"
+title: "Digital System Design"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+type: "undergraduate"
+permalink: /teaching/2018-spring-teaching-1
+venue: "Clemson University, ECE Dept"
+date: 2018-01-07 - 2019-12-05
+location: "Clemson, USA"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+I graded the Digital System Design (ECE 3270) course which taught students the 
+basics of digital system design in VHDL and enabled them to build circuits
+ranging from purely combinatorial to fully functioning simple processors. 
