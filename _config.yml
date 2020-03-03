@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ankit's Machine Learning Corner"
+title                    : "Poorly Coded Nets"
 title_separator          : "-"
 name                     : &name "Ankit Kulshrestha"
 description              : &description "PhD Student at Clemson University"
