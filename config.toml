@@ -1,0 +1,27 @@
+baseURL = 'https://aicaffeinelife.github.io'
+languageCode = 'en-us'
+title = 'The ML Cafe'
+theme = 'LoveIt'
+description = 'A cafe to think and do ML stuff while sipping your favorite espresso'
+
+
+[author]
+    name = "Ankit Kulshrestha"
+    email = "akulshr@udel.edu"
+    link = "akulsh912.com"
+
+[params]
+    title = "The ML Cafe"
+    description = "A place to check out ML while sipping coffee"
+    [params.header.title]
+        name = "The ML Cafe"
+    [params.home.profile]
+        subtitle = "A place to check out ML while sipping coffee"
+    [params.social]
+        Github = "aicaffeinelife"
+        Twitter = "aicaffeinelife"
+        LinkedIn = "ankit-kulshrestha-611ab088"
+
+
+    [params.math]
+        enable = true
