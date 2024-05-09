@@ -26,11 +26,11 @@ Clearly, the story isn't going to satisfy my mathematically oriented readers. So
 Anyways, [Aaronson _et al._](https://arxiv.org/pdf/1711.01053) came up with this idea that you _don't_ need to reconstruct the full Mummy (erm.. I mean quantum state). It will be sufficient to predict _some_ finite properties of this unknown state and thereby gain a _shadow_ of the unknown quantum state in terms of those finite properties. To be more dry, here's the original definition from their work:
 
 <!-- ![alt text](../../static/images/shadow_tomography_aaronson.png) -->
-<img src='../../static/images/shadow_tomography_aaronson.png'/>
+<img src='images/shadow_tomography_aaronson.png'/>
 
 Here $E_1 \dots E_M$ are measurement outcomes when a quantum state in measured in some basis (this defines a probability distribution over the set of possible outcomes). Their key result is this:
 
-![alt text](../../static/images/aaronson_sample_result.png)
+![alt text](images/aaronson_sample_result.png)
 
 Essentially, they say we can predict $M$ properties of an unknown quantum state upto an accuracy $\varepsilon$ with at most $k$ copies of $\rho$ bounded by that big $\tilde{O}$ . The bound depends on the number of properties $M$ we want to predict (poly-logarithmically) and _logarithmically_ with the system size $D$. 
 
@@ -58,7 +58,7 @@ The protocol prescribed is very simple in practice:
 
 Most of the tomography literature was focused on obtaining a "close enough" version of an unknown quantum state $\rho$ . The works by Aaronson and this one allowed us to ask more from the shadow we mined in the depths of Minas-Tritnh. For example, we wish to predict various linear properties of the quantum system. Classical shadows enable us to do so, without really caring about the unknown quantum state.  Once we acquire the shadow, we can work completely in _classical_ space and process this information via classical transforms. Let's say we have some quantum observables $O_1, O_2, \dots O_M$ and we want to predict their properties. Assuming we have access to a classical shadow $\hat{\rho} = S(\rho; N)$ we can predict $Tr[O_i\hat{\rho}]$ by using a median-of-means approximation presented in Algorithm 1 of the paper. More importantly, here's the bound on the number of samples required to approximate the expectation values of quantum observables up to a certain accuracy $\epsilon$ :
 
-<img src='../../static/images/huang_preskil_sample_result.png'/>
+<img src='images/huang_preskil_sample_result.png'/>
 
 It shows that we only need samples that scale _logarithmically_ with the _number of observables_. The bound is independent of system size since the $||O||^2_{shadow}$ depends on the  type of ensemble one samples from. If $\mathcal{U} = Cl(2^n)$ (i.e. the clifford group), then the expression after $log(M)$ is upper bounded by operator norm $Tr[O]^2$  and if $\mathcal{U} = Cl(2)^{\otimes n}$ i.e. single qubit cliffords then the expression is upper bounded as $4^{k}||O||^2_{\infty}$ where $k$ is the locality (i.e. number of qubits a particular single qubit gate acts on). Thus, we can reliably predict $M$ properties of quantum observables by simply acquiring a classical representation and computing $Tr[O\hat{\rho}]$ with a finite number of samples. 
 
