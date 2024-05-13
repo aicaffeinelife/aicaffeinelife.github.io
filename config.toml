@@ -1,8 +1,8 @@
 baseURL = 'https://aicaffeinelife.github.io'
 languageCode = 'en-us'
-title = 'The ML Cafe'
+title = 'My Mind Closet'
 theme = 'LoveIt'
-description = 'A cafe to think and do ML stuff while sipping your favorite espresso'
+description = 'A place where I stow my thoughts on a variety of topics'
 
 
 [author]
@@ -11,12 +11,12 @@ description = 'A cafe to think and do ML stuff while sipping your favorite espre
     link = "akulsh912.com"
 
 [params]
-    title = "The ML Cafe"
-    description = "A place to check out ML while sipping coffee"
+    title = "My Mind Closet"
+    description = "A place where I stow my thoughts on a variety of topics"
     [params.header.title]
-        name = "The ML Cafe"
+        name = "My Mind Closet"
     [params.home.profile]
-        subtitle = "A place to check out ML while sipping coffee"
+        subtitle = "A place where I stow my thoughts on a variety of topics"
     [params.social]
         Github = "aicaffeinelife"
         Twitter = "aicaffeinelife"
