@@ -1,6 +1,6 @@
 ---
 title: "The shadowy art of classical shadows - Part 1"
-date: 2024-5-8T19:09:54-04:00
+date: "2024-05-08T14:45:00"
 draft: false
 author: Ankit Kulshrestha
 math:

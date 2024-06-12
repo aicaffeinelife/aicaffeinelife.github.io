@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>My Mind Closet</title>
+        <link>https://aicaffeinelife.github.io/</link>
+        <description>A place where I stow my thoughts on a variety of topics</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>akulshr@udel.edu (Ankit Kulshrestha)</managingEditor>
+            <webMaster>akulshr@udel.edu (Ankit Kulshrestha)</webMaster><lastBuildDate>Sun, 12 Feb 2023 12:29:28 -0500</lastBuildDate>
+            <atom:link href="https://aicaffeinelife.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Test Post</title>
+    <link>https://aicaffeinelife.github.io/posts/test-post/</link>
+    <pubDate>Sun, 12 Feb 2023 12:29:28 -0500</pubDate>
+    <author>Ankit Kulshrestha</author>
+    <guid>https://aicaffeinelife.github.io/posts/test-post/</guid>
+    <description><![CDATA[This is a first test post testing out various features avaialble in the theme.
+First, let&rsquo;s take a basic line equation $y = mx + c$. The slope $m$ defines the direction of the line in 2d space and $c$ is a constant from which line starts when $x = 0$. Although unintersting, lines have many uses like:
+give an idea about the direction of a parabola join two points together :D Statistics: Expectation of a random variable $X$ is defined as $\mathbb{E}(X) = \int x p(x) dx$ where $p(x)$ is the probability distribution of $X$ and $x$ is the possible values $X$ can take.]]></description>
+</item>
+<item>
+    <title>The shadowy art of classical shadows - Part 1</title>
+    <link>https://aicaffeinelife.github.io/posts/2024_05_08_classical_shadows/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Ankit Kulshrestha</author>
+    <guid>https://aicaffeinelife.github.io/posts/2024_05_08_classical_shadows/</guid>
+    <description><![CDATA[The shadowy art of classical shadows - Part 1 Recently, I&rsquo;ve become interested in a topic of quantum information science called classical shadows of quantum states. It&rsquo;s a topic that not a lot of people pay attention to since most of the work in quantum is oriented towards devising hybrid quantum-classical algorithms that are of use now. I guess people reading this would be like &ldquo;Pfft, show us a working quantum computer first and then talk about interesting quantum stuff.]]></description>
+</item>
+<item>
+    <title>The shadowy art of classical shadows - Part 1</title>
+    <link>https://aicaffeinelife.github.io/posts/2024_06_07_classical_shadows/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Ankit Kulshrestha</author>
+    <guid>https://aicaffeinelife.github.io/posts/2024_06_07_classical_shadows/</guid>
+    <description><![CDATA[Randomized Measurements and Shadows (a.k.a Part 2) ]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - My Mind Closet</title>
+        <link>https://aicaffeinelife.github.io/tags/</link>
+        <description>Tags - Tag - My Mind Closet</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>akulshr@udel.edu (Ankit Kulshrestha)</managingEditor>
+            <webMaster>akulshr@udel.edu (Ankit Kulshrestha)</webMaster><atom:link href="https://aicaffeinelife.github.io/tags/" rel="self" type="application/rss+xml" /></channel>
+</rss>
