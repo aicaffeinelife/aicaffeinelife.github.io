@@ -1,0 +1,57 @@
+/* assets/css/custom.css */
+
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base font for body text */
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #2c3e50;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1a202c;
+}
+
+/* Navigation and UI elements */
+.navbar, .menu, .sidebar {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Code blocks */
+code, pre {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+/* Adjust paragraph spacing */
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Improve readability on mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Adjust link styles */
+a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: currentColor;
+}

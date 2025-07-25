@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>In all fairness: Engineering Fairness in Modern Machine Learning Algorithms - My Mind Closet</title><meta name="Description" content="A place where I stow my thoughts on a variety of topics"><meta property="og:title" content="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms" />
+<meta property="og:description" content="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms I was a young bright eyed MS student at NeurIPS 2017 taking it all in - CNNs were still the rage, LeCun was still a celebrity and the air was filled with possibilities of these deep neural networks addressing problems that were thought to be pretty difficult up until now (unlike today where everything is some version of LLM applied to x-problem sigh)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-08T14:45:00+00:00" />
+<meta property="article:modified_time" content="2024-05-08T14:45:00+00:00" /><meta property="og:site_name" content="My Mind Closet" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms"/>
+<meta name="twitter:description" content="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms I was a young bright eyed MS student at NeurIPS 2017 taking it all in - CNNs were still the rage, LeCun was still a celebrity and the air was filled with possibilities of these deep neural networks addressing problems that were thought to be pretty difficult up until now (unlike today where everything is some version of LLM applied to x-problem sigh)."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/" /><link rel="prev" href="https://aicaffeinelife.github.io/posts/2024_05_08_classical_shadows/" /><link rel="next" href="https://aicaffeinelife.github.io/posts/2024_06_07_classical_shadows/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "In all fairness: Engineering Fairness in Modern Machine Learning Algorithms",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/aicaffeinelife.github.io\/posts\/2025_07_23_fairlearn\/"
+        },"genre": "posts","wordcount":  954 ,
+        "url": "https:\/\/aicaffeinelife.github.io\/posts\/2025_07_23_fairlearn\/","datePublished": "2024-05-08T14:45:00+00:00","dateModified": "2024-05-08T14:45:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Ankit Kulshrestha"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My Mind Closet">My Mind Closet</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My Mind Closet">My Mind Closet</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">In all fairness: Engineering Fairness in Modern Machine Learning Algorithms</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="akulsh912.com" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Ankit Kulshrestha</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-05-08">2024-05-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;954 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-problem-setup">The Problem Setup</a></li>
+    <li><a href="#from-insights-to-algorithmic-components">From insights to algorithmic components</a></li>
+    <li><a href="#testing-the-insights-on-real-data">Testing the insights on real data</a></li>
+    <li><a href="#measures-of-fairness">Measures of Fairness</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="in-all-fairness-engineering-fairness-in-modern-machine-learning-algorithms">In all fairness: Engineering Fairness in Modern Machine Learning Algorithms</h1>
+<p>I was a young bright eyed MS student at NeurIPS 2017 taking it all in - CNNs were still the rage, LeCun was still a celebrity and the air was filled with possibilities of these deep neural networks addressing problems that were thought to be pretty difficult up until now (unlike today where everything is some version of LLM applied to x-problem <em>sigh</em>). Engineers often focus on making a problem work and often overlook a crucial factor in engineering - it has to interact with people in the <em>real world</em>. It was at this conference that I had the good fortune of listening to Kate Crawford&rsquo;s <a href="https://www.youtube.com/watch?v=fMym_BKWQzk&amp;" target="_blank" rel="noopener noreffer ">keynote</a> on the inherent bias in machine learning algorithms.  I found it especially interesting since many of the systems even today display (un-)intentional bias.</p>
+<p>Like many good ideas that pop into my mind, I had pushed it in the &ldquo;sounds fun, may attempt something on it later&rdquo; shelf in my mind closet. It stayed there until the first year of my PhD when my advisor asked me to look into this problem.</p>
+<h2 id="the-problem-setup">The Problem Setup</h2>
+<p>I considered a supervised learning setup in this problem. This meant that I assumed a dataset $\mathcal{D}$ consisting of a 3-tuple $(\mathbf{x}_i, y_i, s_i)$. The first two are pretty standard - a n-dimensional data point and the associated label. The third component is interesting. In fairness literature this is is called the <em>sensitive attribute</em>.</p>
+<p>Imagine you&rsquo;re a banker whose main job is to either approve or deny a loan to an individual. You may look at the person&rsquo;s age, gender, income, race, education and based on the available data (in your Excel sheet) you decide if this person is worth the risk. Now, as a human you can let your bias creep in the process but the flip side is that you will be held accountable in case the denied person decides to sue you.</p>
+<p>On the other hand, if you offload the task to a machine with &ldquo;advanced&rdquo; AI algorithms, no one can be held accountable since the outcome is determined by the machine based on countless comparisons from previous cases. You can simply shrug and walk away. There&rsquo;s a catch however - the &ldquo;AI&rdquo; that you used may have been trained on a dataset that encoded some sort of biases in the training set itself! For example, individuals belonging to certain age or gender were labeled as denied more frequently than others. This particular feature in data is called a <em>sensitive feature</em> or <em>sensitive attribute</em> since it biases a machine learning algorithm&rsquo;s output on some features which inherently must be ignored by an impartial human.</p>
+<p>When I read through the literature on this topic, something bothered me for days. One day, it clicked. The problem with defining this $s_i$ beforehand and optimizing a machine learning algorithm to remove dependence on $s_i$ is like telling a child to close it&rsquo;s ears when it hears a particular phrase. However, children are intelligent and can often guess what you&rsquo;re gonna say based on context and past data. Similarly, machine learning algorithms will learn <em>associations</em> between features and still secretly bias their decisions on the sensitive feature. Reading more and more into this, I had two insights:</p>
+<ol>
+<li>Not all features (including $s_i$) contribute equally to the model&rsquo;s output.</li>
+<li>Removing dependence on $s_i$ for decision making is not foolproof - the model may use <em>proxy</em> sensitive features to make predicitions.</li>
+</ol>
+<h2 id="from-insights-to-algorithmic-components">From insights to algorithmic components</h2>
+<p>The first insight implies that there exist a subset of features in data that contribute most towards the overall performance of the model. I called  this subset a <em>critical feature set</em>.</p>
+<p>How do we find such a set? We clearly cannot assume it from examining the data. My solution was to run a pre-processing step on the training set:</p>
+<ul>
+<li>
+<p>First, I define a metric $\mathcal{M}$ that I measure to evaluate the model&rsquo;s performance. For different tasks, these can be accuracy, mean squared error or F1 score.</p>
+</li>
+<li>
+<p>Partition the training data into $K$ non overlapping folds. Then train the model on $K-1$ fold and evaluate the performance on the remaining fold.</p>
+</li>
+<li>
+<p>Run the procedure $N$ times with feature permutation (this prevents the machine learning model from &ldquo;cheating&rdquo; by memorization).</p>
+</li>
+</ul>
+<p>At the end of the procedure, I would have built a &ldquo;feature importance vector&rdquo; $\mathcal{I}_x$ where $f_i \in \mathcal{I}<em>x = \Delta - \frac{1}{N}\sum</em>{i}^N \delta_i$. Here $\Delta$ is the metric value when no features are permuted and $\delta_i$ is the metric value when the $i^{th}$ permutation is applied to the data.</p>
+<p>The second insight implied that the input sensitive variable $s_i$ may have correlations with other features within the data. Thus, as a second pre-processing step, I estimate $\Sigma$ by fitting a maximum likelihood estimator on the training data.</p>
+<h2 id="testing-the-insights-on-real-data">Testing the insights on real data</h2>
+<p>To evaluate these insights on real world datasets, I selected two representative datasets. The first one called ADULT is a collection of people described by various features like age, race, gender, education etc. The task is to determine if they are good candidate for a loan. The second one is the famous COMPAS dataset that accompanied the story about how a machine learning decision system was more likely to re-incarcerate African-Americans than white Americans. The sensitive feature in ADULT dataset is the person&rsquo;s gender while in COMPAS it&rsquo;s race of the individual.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/fairness/adult_crit_feats.png"
+        data-srcset="/fairness/adult_crit_feats.png, /fairness/adult_crit_feats.png 1.5x, /fairness/adult_crit_feats.png 2x"
+        data-sizes="auto"
+        alt="/fairness/adult_crit_feats.png"
+        title="alt text" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/fairness/compas_crit_feats.png"
+        data-srcset="/fairness/compas_crit_feats.png, /fairness/compas_crit_feats.png 1.5x, /fairness/compas_crit_feats.png 2x"
+        data-sizes="auto"
+        alt="/fairness/compas_crit_feats.png"
+        title="alt text" /></p>
+<p>The outcome of computing feature importance is very interesting. You can see for yourself that neither gender nor race have a significant effect on the prediction of the machine learning systems <em>on their own</em>. Thus, if they are providing biased results it must be because of these features being correlated with more predicitve ones.</p>
+<h2 id="measures-of-fairness">Measures of Fairness</h2>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-05-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/" data-title="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms" data-via="aicaffeinelife"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/" data-title="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/" data-title="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/" data-title="In all fairness: Engineering Fairness in Modern Machine Learning Algorithms"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2024_05_08_classical_shadows/" class="prev" rel="prev" title="The shadowy art of classical shadows - Part 1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>The shadowy art of classical shadows - Part 1</a>
+            <a href="/posts/2024_06_07_classical_shadows/" class="next" rel="next" title="The shadowy art of classical shadows - Part 2">The shadowy art of classical shadows - Part 2<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.119.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="akulsh912.com" target="_blank">Ankit Kulshrestha</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

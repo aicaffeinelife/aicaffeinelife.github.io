@@ -3,12 +3,20 @@ languageCode = 'en-us'
 title = 'My Mind Closet'
 theme = 'LoveIt'
 description = 'A place where I stow my thoughts on a variety of topics'
-
+enableEmoji = true
 
 [author]
     name = "Ankit Kulshrestha"
-    email = "akulshr@udel.edu"
+    email = "akulsh929@gmail.com"
     link = "akulsh912.com"
+
+[menu]
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+        weight = 1
+
 
 [params]
     title = "My Mind Closet"
@@ -21,7 +29,8 @@ description = 'A place where I stow my thoughts on a variety of topics'
         Github = "aicaffeinelife"
         Twitter = "aicaffeinelife"
         LinkedIn = "ankit-kulshrestha-611ab088"
-
+    [params.custom]
+        css = ["css/custom.css"]
 
     [params.math]
         enable = true
