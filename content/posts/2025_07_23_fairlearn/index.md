@@ -68,13 +68,15 @@ For a supervised learning paradigm, we define three distinct variables. $\hat{Y}
 
 Now, if we do have access to the ground truth labels, we can evaluate the fairness by conditioning the outcome on $\mathcal{Y}$. Some criteria that fall in this category are Equal Odds (where $D = -1 \perp \mathcal{S} | \mathcal{Y} = 1$ and $D = 1 \perp \mathcal{S} | \mathcal{Y}=1$)[^Hardt], and Equal Opportunity (where $D = 1 \perp \mathcal{S} | Y=1$)[^Donini][^Zafar]. A defining characteristic of these metrics is that they  can be interpreted as a score function $\mathcal{L}: \mathcal{X} \times \mathcal{S} \times \mathcal{Y} \rightarrow \mathbb{R}$. For instance, the Equal Opportunity metric can be expressed as
 
+
 $$
-  \mathcal{L}(\mathcal{X}, \mathcal{Y},  \mathcal{S}) =  \mathbb{E}\left[|l^{+}_{a}(f(\textbf{x}_{i}), y_{i}) - l^{+}_{b}(f(\textbf{x}_{i}), y_{i})|\right]
+\mathcal{L}(\mathcal{X}, \mathcal{S}, \mathcal{Y})= \mathbb{E}[|l^{+}_a(f(\mathbf{x}_i, y_i)) - l^{+}_b(f(\mathbf{x}_i), y_i))]
 $$
 
 and a corresponding score function for Equality of True Negative Rates can be written as
+
 $$
-  \mathcal{L}(\mathcal{X}, \mathcal{Y},  \mathcal{S}) =  \mathbb{E}\left[|l^{-}_{a}(f(\textbf{x}_{i}), y_{i}) - l^{-}_{b}(f(\textbf{x}_{i}), y_{i})|\right]
+\mathcal{L}(\mathcal{X}, \mathcal{Y},  \mathcal{S}) =  \mathbb{E}[|l^{-}_a(f(\mathbf{x}_i), y_i) - l^{-}_b(f(\mathbf{x}_i), y_i)|]
 $$
 
 Here, $l^{\pm}_{g}$ is the per sample loss for any learning algorithm $f$ on either positively or negatively labeled points belonging to a sensitive group $g$.
@@ -109,17 +111,21 @@ $$
 
 Where $\lambda ||\mathbf{w}||_2$ is the regularization constraint on the weight vector so that it's constrained within a ball of radius $\lambda$. But how do we integrate a fairness constraint like Equal Opportunity in training a linear model? We know we need to constrain the weight vector $\mathbf{w}$ to disregard the sensitive variable somehow. Donini _et al._[^Donini] propose a constraint of the form $\langle \mathbf{w}, \mathbf{u} \rangle \leq \epsilon$ where $\mathbf{u}$ is the centroid of positively labeled points belonging to a particular sensitive group. So if $\mathcal{S} = \{a, b\}$:
 
+<!-- $$
+\mathbf{u}_a = \frac{1}{N^{+}_a}\sum_{j=1}^n \phi(\mathbf{x}_j)
+$$ -->
+
 $$
-\mathbf{u}_a = \frac{1}{N^+_a}\sum_{j=1}^n \phi(\mathbf{x}_j)
+\mathbf{u_{g}} = \sum_{j=1}^{n} \frac{\phi(\mathbf{x}_j)}{N^{+}_g} 
 $$
 
-Then to draw a hyperplane that strictly respects the EO metric, we need to have the weight vector _orthogonal_ to $\mathbf{u}_a - \mathbf{u}_b$. In other words $\langle \mathbf{w}, \mathbf{u}_a - \mathbf{u}_b\rangle = 0$. So the modification to the SVM objective is: 
+Then to draw a hyperplane that strictly respects the EO metric, we need to have the weight vector _orthogonal_ to $\mathbf{u}_a - \mathbf{u}_b$. In other words $\langle\mathbf{w}, \mathbf{u}_a - \mathbf{u}_b\rangle$. So the modification to the SVM objective is: 
 
 $$
 \min_{\mathbf{w}} \sum_{i=1}^n l(f(\mathbf{x}), y) + \lambda ||\mathbf{w}||_2\  s.t.  \langle \mathbf{w}, \mathbf{u}_a - \mathbf{u}_b\rangle = 0
 $$
 
-To integrate the user defined fairness tolerane $f_{tol}$ we can adjust this constraint to be  $\langle \mathbf{w}, \mathbf{u}_a - \mathbf{u}_b\rangle \leq f_{tol}$. 
+To integrate the user defined fairness tolerane $f_{tol}$ we can adjust this constraint to be  $\langle \mathbf{w}, \mathbf{u_a} - \mathbf{u_b}\rangle \leq f_{tol}$. 
 
 One can then setup the dual of the constrained optimization problem and solve for the support vector coefficients $\mathbf{\alpha}$ that respect the constraint. The package [CONFAIR](https://github.com/aicaffeinelife/CONFAIR/tree/master) implements all code for fairness evaluation using SVMs. It supports $f_{tol} = 0$ and $f_{tol} \neq 0$ cases.  
 

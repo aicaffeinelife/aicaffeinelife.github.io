@@ -4,23 +4,23 @@
         <link>https://aicaffeinelife.github.io/</link>
         <description>A place where I stow my thoughts on a variety of topics</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>akulsh929@gmail.com (Ankit Kulshrestha)</managingEditor>
-            <webMaster>akulsh929@gmail.com (Ankit Kulshrestha)</webMaster><lastBuildDate>Tue, 11 Jun 2024 15:00:40 &#43;0000</lastBuildDate>
+            <webMaster>akulsh929@gmail.com (Ankit Kulshrestha)</webMaster><lastBuildDate>Wed, 23 Jul 2025 14:45:00 &#43;0000</lastBuildDate>
             <atom:link href="https://aicaffeinelife.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>In all fairness: Engineering Fairness in Modern Machine Learning Algorithms</title>
+    <link>https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/</link>
+    <pubDate>Wed, 23 Jul 2025 14:45:00 &#43;0000</pubDate>
+    <author>Ankit Kulshrestha</author>
+    <guid>https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/</guid>
+    <description><![CDATA[In all fairness: Engineering Fairness in Modern Machine Learning Algorithms I was a young bright eyed MS student at NeurIPS 2017 taking it all in - CNNs were still the rage, LeCun was still a celebrity and the air was filled with possibilities of these deep neural networks addressing problems that were thought to be pretty difficult up until now (unlike today where everything is some version of LLM applied to x-problem sigh).]]></description>
+</item>
+<item>
     <title>The shadowy art of classical shadows - Part 2</title>
     <link>https://aicaffeinelife.github.io/posts/2024_06_07_classical_shadows/</link>
     <pubDate>Tue, 11 Jun 2024 15:00:40 &#43;0000</pubDate>
     <author>Ankit Kulshrestha</author>
     <guid>https://aicaffeinelife.github.io/posts/2024_06_07_classical_shadows/</guid>
     <description><![CDATA[Randomized Measurements and Shadows (a.k.a Part 2) In the earlier blog post I had described the an interesting piece of quantum information science literature - classical shadows. The overreaching idea was to use random measurements to obtain some information about an unknown quantum state without requiring to store (or know) multiple copies of that state and re-construct it. Classical shadows have two advantages when it comes to today&rsquo;s state of quantum computing.]]></description>
-</item>
-<item>
-    <title>In all fairness: Engineering Fairness in Modern Machine Learning Algorithms</title>
-    <link>https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/</link>
-    <pubDate>Wed, 08 May 2024 14:45:00 &#43;0000</pubDate>
-    <author>Ankit Kulshrestha</author>
-    <guid>https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/</guid>
-    <description><![CDATA[In all fairness: Engineering Fairness in Modern Machine Learning Algorithms I was a young bright eyed MS student at NeurIPS 2017 taking it all in - CNNs were still the rage, LeCun was still a celebrity and the air was filled with possibilities of these deep neural networks addressing problems that were thought to be pretty difficult up until now (unlike today where everything is some version of LLM applied to x-problem sigh).]]></description>
 </item>
 <item>
     <title>The shadowy art of classical shadows - Part 1</title>
