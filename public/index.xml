@@ -4,9 +4,17 @@
         <link>https://aicaffeinelife.github.io/</link>
         <description>A place where I stow my thoughts on a variety of topics</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>akulsh929@gmail.com (Ankit Kulshrestha)</managingEditor>
-            <webMaster>akulsh929@gmail.com (Ankit Kulshrestha)</webMaster><lastBuildDate>Wed, 23 Jul 2025 14:45:00 &#43;0000</lastBuildDate>
+            <webMaster>akulsh929@gmail.com (Ankit Kulshrestha)</webMaster><lastBuildDate>Fri, 31 Oct 2025 14:45:00 &#43;0000</lastBuildDate>
             <atom:link href="https://aicaffeinelife.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Experiencing Knowledge from Multiple Teachers</title>
+    <link>https://aicaffeinelife.github.io/posts/2025_09_05_experience_loss/</link>
+    <pubDate>Fri, 31 Oct 2025 14:45:00 &#43;0000</pubDate>
+    <author>Ankit Kulshrestha</author>
+    <guid>https://aicaffeinelife.github.io/posts/2025_09_05_experience_loss/</guid>
+    <description><![CDATA[Experiencing Knowledge from Multiple Teachers I am back with another tale of my colorful grad student days. This one happened sometime around end of 2017 when people were using Caffe (yes that Caffe) and Tensorflow was still being used for serious projects. PyTorch had just released their v.0.0.1 and it was ideal for beginners like me who ran off like scared puppies at the sight of Tensorflow or Caffe code&hellip;]]></description>
+</item>
+<item>
     <title>In all fairness: Engineering Fairness in Modern Machine Learning Algorithms</title>
     <link>https://aicaffeinelife.github.io/posts/2025_07_23_fairlearn/</link>
     <pubDate>Wed, 23 Jul 2025 14:45:00 &#43;0000</pubDate>
