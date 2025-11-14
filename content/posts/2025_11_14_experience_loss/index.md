@@ -18,7 +18,7 @@ In this blog post, I will introduce the field of model compression and touch on 
 
 ## Model Compression 
 
-Let us imagine having some dataset $\mathcal{D}_{train}=\{\mathbf{x}_i, y_i\}_{i=1}^n$ on which we fit a model $f(\boldsymbol{\theta})$. We measure the performance of this network by computing some metric over unseen data $\mathcal{D}_{test}$ (typically it's accuracy or [F1-score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)). 
+Let us imagine having some dataset $\mathcal{D_{train}} = \\{\mathbf{x_i}, y_i\\}\_{i=1}\^{n}$ on which we fit a model $f(\boldsymbol{\theta})$. We measure the performance of this network by computing some metric over unseen data $\mathcal{D}_{test}$ (typically it's accuracy or [F1-score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)). 
 
 The central question in model compression is this: *Suppose I somehow come up with a model $f(\boldsymbol{\theta}')$ such that $\boldsymbol{\theta}' \subset \boldsymbol{\theta}$. How can I ensure that the model $f(\boldsymbol{\theta}')$ has comparable performance to the original model?*
 
