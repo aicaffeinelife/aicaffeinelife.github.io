@@ -20,11 +20,11 @@ enableEmoji = true
 
 [params]
     title = "My Mind Closet"
-    description = "A place where I stow my thoughts on a variety of topics"
+    description = "Built by a human, for humans."
     [params.header.title]
         name = "My Mind Closet"
     [params.home.profile]
-        subtitle = "A place where I stow my thoughts on a variety of topics"
+        subtitle = "Built by a human, for humans."
     [params.social]
         Github = "aicaffeinelife"
         Twitter = "aicaffeinelife"
